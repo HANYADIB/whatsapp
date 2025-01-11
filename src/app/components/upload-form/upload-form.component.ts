@@ -48,7 +48,7 @@ import { UploadFormData } from '../../models/upload-form.model';
             id="fileName" 
             name="fileName" 
             [(ngModel)]="formData.fileName" 
-            required>
+            >
         </div>
 
         <div class="form-group">
@@ -58,7 +58,7 @@ import { UploadFormData } from '../../models/upload-form.model';
             id="NameLab" 
             name="NameLab" 
             [(ngModel)]="formData.NameLab" 
-            required>
+            >
         </div>
 
         <div class="form-group">
@@ -68,7 +68,7 @@ import { UploadFormData } from '../../models/upload-form.model';
             id="Cost" 
             name="Cost" 
             [(ngModel)]="formData.Cost" 
-            required>
+            >
         </div>
 
         <div class="form-group">
@@ -186,6 +186,7 @@ export class UploadFormComponent {
       error: (error) => {
         console.error('Error submitting form', error);
         alert('Error Message . Please try again.');
+        this.isLoading = false;
       }
     });
   }
