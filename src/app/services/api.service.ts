@@ -35,7 +35,7 @@ export class ApiService {
     }
     const headers = new HttpHeaders()
     .set('UserId', userId.toString())
-    .set('Access-Control-Allow-Origin', ''); // Example value for CORS
+    .set('Access-Control-Allow-Origin', '*'); // Example value for CORS
   
 
 
