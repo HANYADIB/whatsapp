@@ -33,7 +33,11 @@ export class ApiService {
     if (formData.file) {
       data.append('file', formData.file);
     }
-    const headers = new HttpHeaders().set('UserId', userId.toString());
+    const headers = new HttpHeaders()
+    .set('UserId', userId.toString())
+    .set('Access-Control-Allow-Origin', ''); // Example value for CORS
+  
+
 
     return this.http.post(this.apiUrl, data , { headers: headers , withCredentials: true });
   }
