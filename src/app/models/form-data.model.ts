@@ -1,10 +1,10 @@
 export interface FormData {
   chatId: string;
   caption: string;
-  fileName: string;
+  fileName:string ;
   file: File | null;
-  Name: string;
-  NameLab: string;
+  Name: string ;
+  NameLab: string ;
   Cost: number | null;
 }
 export interface statuss {

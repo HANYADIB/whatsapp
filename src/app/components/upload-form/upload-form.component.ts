@@ -142,7 +142,7 @@ export class UploadFormComponent {
     file: null,
     Name: '',
     NameLab: '' ,
-    Cost: 0
+    Cost: null
 
   };
   constructor(private apiService: ApiService) {
