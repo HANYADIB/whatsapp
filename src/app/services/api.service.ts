@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'https://localhost:44363/api/GreenAPI/UploadFormDataAsync';
+  private apiUrl = 'https://hanyadib404.bsite.net/api/GreenAPI/UploadFormDataAsync';
 
   constructor(private http: HttpClient) {}
   submitForm(formData: UploadFormData , userId :number = 1 ): Observable<any> {
@@ -26,6 +26,6 @@ export class ApiService {
     }
     const headers = new HttpHeaders().set('UserId', userId.toString());
 
-    return this.http.post(this.apiUrl, data , { headers: headers });
+    return this.http.post(this.apiUrl, data , { headers: headers , withCredentials: true });
   }
 }

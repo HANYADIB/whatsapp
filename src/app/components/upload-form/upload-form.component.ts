@@ -76,7 +76,11 @@ import { UploadFormData } from '../../models/upload-form.model';
           <input 
             type="file" 
             id="file" 
-            (change)="onFileSelected($event)">
+            name="file" 
+            [(ngModel)]="formData.file" 
+            required
+            (change)="onFileSelected($event)"
+           >
         </div>
 
         <button type="submit" [disabled]="!form.valid || isLoading">Submit</button>
