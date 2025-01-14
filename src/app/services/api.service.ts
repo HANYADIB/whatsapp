@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
  // private apiUrl = 'https://hanyadib404.bsite.net/api/GreenAPI/UploadFormDataAsync';
-  private apiUrl = 'https://testcoreapi.garassolutions.com/api/GreenAPI/UploadFormDataAsync';
+  private apiUrl = 'https://hanyadib404.bsite.net/api/Stmark/UploadFormDataAsync';
 
 
   constructor(private http: HttpClient) {}
@@ -34,11 +34,11 @@ export class ApiService {
       data.append('file', formData.file);
     }
     const headers = new HttpHeaders()
-    .set('UserId', userId.toString())
-    .set('Access-Control-Allow-Origin', '*'); // Example value for CORS
+    .set('UserId', userId.toString());
+    // Example value for CORS
   
 
 
-    return this.http.post(this.apiUrl, data , { headers: headers , withCredentials: true });
+    return this.http.post(this.apiUrl, data , { headers: headers ,  withCredentials: true });
   }
 }
